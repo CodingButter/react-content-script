@@ -6,5 +6,11 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true
   },
-  "include": ["vite.config.ts", "manifest.json"]
+  "include": ["vite.config.ts", "manifest.json"],
+  "baseUrl": "./",
+  "paths": {
+    "@popup/*": ["src/*"],
+    "@script/*": ["content-script/src/*"],
+    "@background/*": ["background/src/*"]
+  }
 }
