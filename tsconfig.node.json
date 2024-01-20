@@ -4,13 +4,8 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "declaration": true
   },
-  "include": ["vite.config.ts", "manifest.json"],
-  "baseUrl": "./",
-  "paths": {
-    "@popup/*": ["src/*"],
-    "@script/*": ["content-script/src/*"],
-    "@background/*": ["background/src/*"]
-  }
+  "include": ["vite.config.ts", "manifest.json", "copyshares.ts"]
 }

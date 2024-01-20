@@ -7,7 +7,20 @@ export default {
     "./content-script/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // Custom width and height
+      width: {
+        300: "300px",
+      },
+      height: {
+        500: "500px",
+      },
+      colors: {
+        gpt: {
+          grey: "#343541",
+        },
+      },
+    },
   },
   plugins: [],
 };

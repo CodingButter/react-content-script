@@ -12,17 +12,14 @@
     {
       "matches": ["https://play.tailwindcss.com/*"],
       "js": ["content-script/src/main.tsx"],
+      "css": ["assets/index.css"],
       "media": []
     }
   ],
   "web_accessible_resources": [
     {
       "matches": ["https://play.tailwindcss.com/*"],
-      "resources": [
-        "assets/jsx-runtime.js",
-        "assets/main.tsx.js",
-        "assets/main.css"
-      ],
+      "resources": ["assets/jsx-runtime.js", "assets/main.tsx.js"],
       "use_dynamic_url": true
     }
   ],

@@ -1,34 +1,16 @@
 /// <reference types="chrome" />
 /// <reference types="vite-plugin-svgr/client" />
-import { useEffect, useState } from "react";
 import "./App.css";
-
-async function getUnsplashImage() {
-  const response = await fetch(
-    "https://source.unsplash.com/random/1920x1080?nature"
-  );
-  const blob = await response.blob();
-  const url = URL.createObjectURL(blob);
-  return url;
-}
+import { useEffect, useState } from "react";
 
 function App() {
-  const [image, setImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    getUnsplashImage().then((url) => setImage(url));
-  }, []);
+  useEffect(() => {}, []);
 
   return (
-    <div className="App w-screen h-screen p-10 overflow-hidden flex justify-center items-center">
-      <div className="image-container w-1/2 h-1/2 rounded-md overflow-hidden shadow-lg">
-        {image && (
-          <img
-            src={image}
-            alt="unsplash"
-            className="object-cover w-full h-full"
-          />
-        )}
+    <div className="relative App w-screen h-screen p-10 overflow-hidden flex justify-center items-center">
+      <div className="relative w-2/3 h-2/3 rounded-md overflow-hidden shadow-lg">
+        <div className="absolute top-0 bottom-0 right-0 left-0 image-container w-full h-full rounded-md overflow-hidden shadow-lg"></div>
+        <div className="relative gap-2 p-8 w-full h-full flex flex-col justify-center items-center rounded-md overflow-hidden shadow-lg"></div>
       </div>
     </div>
   );
