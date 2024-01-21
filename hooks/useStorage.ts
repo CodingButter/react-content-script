@@ -1,5 +1,5 @@
 /// <reference types="chrome" />
-import { StorageType } from "../@types/shared";
+import { StorageType } from "@shared/@types/shared";
 /* 
     create a hook to handle storing any data to chrome.storage.sync or chrome.storage.local
 */

@@ -2,8 +2,11 @@
 /// <reference types="vite-plugin-svgr/client" />
 import "./App.css";
 import { useEffect, useState } from "react";
+import useAI from "@script/hooks/useAI";
 
 function App() {
+  const { listModels } = useAI();
+
   useEffect(() => {}, []);
 
   return (

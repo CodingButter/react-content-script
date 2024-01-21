@@ -3,14 +3,12 @@ import SelectModel from "./components/SelectModel";
 import APIKeyInput from "./components/APIKeyInput";
 
 const App: React.FC = () => {
-  const [api, setApi] = useState<string>("");
   const [model, setModel] = useState<string>("");
   const [apiKey, setApiKey] = useState<string>("");
 
   useEffect(() => {
     // Load saved settings from chrome.storage
     chrome.storage.sync.get(["api", "model", "apiKey"], (result) => {
-      if (result.api) setApi(result.api);
       if (result.model) setModel(result.model);
       if (result.apiKey) setApiKey(result.apiKey);
     });
@@ -18,7 +16,7 @@ const App: React.FC = () => {
 
   const handleSave = () => {
     // Save settings to chrome.storage
-    chrome.storage.sync.set({ api, model, apiKey });
+    chrome.storage.sync.set({ model, apiKey });
     // Add any additional actions upon saving, like notifications
   };
 
